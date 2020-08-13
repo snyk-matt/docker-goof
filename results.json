@@ -1,0 +1,942 @@
+json
+{
+  vulnerabilities: [
+    {
+      title: 'Arbitrary Code Injection',
+      credit: [Array],
+      packageName: 'apt',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        'Incorrect sanitation of the 302 redirect field in HTTP transport method of apt versions 1.4.8 and earlier can lead to content injection by a MITM attacker, potentially leading to remote code execution on the target machine.\n' +
+        '\n' +
+        '## References\n' +
+        '- [Apache Security Advisory](https://lists.apache.org/thread.html/8338a0f605bdbb3a6098bb76f666a95fc2b2f53f37fa1ecc89f1146f@%3Cdevnull.infra.apache.org%3E)\n' +
+        '- [Debian Security Advisory](https://www.debian.org/security/2019/dsa-4371)\n' +
+        '- [Debian Security Announcement](https://lists.debian.org/debian-lts-announce/2019/01/msg00013.html)\n' +
+        '- [Debian Security Announcement](https://lists.debian.org/debian-lts-announce/2019/01/msg00014.html)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2019-3462)\n' +
+        '- [Netapp Security Advisory](https://security.netapp.com/advisory/ntap-20190125-0002/)\n' +
+        '- [Security Focus](http://www.securityfocus.com/bid/106690)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-3462)\n' +
+        '- [Ubuntu Security Advisory](https://usn.ubuntu.com/3863-1/)\n' +
+        '- [Ubuntu Security Advisory](https://usn.ubuntu.com/3863-2/)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 8.1,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-02-06T14:40:41.865288Z',
+      modificationTime: '2020-07-14T08:47:53.207776Z',
+      publicationTime: '2019-01-28T21:29:00Z',
+      disclosureTime: '2019-01-28T21:29:00Z',
+      id: 'SNYK-DEBIAN8-APT-407401',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'apt',
+      version: '1.0.9.8.4',
+      nearestFixedInVersion: '1.0.9.8.5',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'Out-of-Bounds',
+      credit: [Array],
+      packageName: 'curl',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        "libcurl versions from 7.36.0 to before 7.64.0 are vulnerable to a stack-based buffer overflow. The function creating an outgoing NTLM type-3 header (`lib/vauth/ntlm.c:Curl_auth_create_ntlm_type3_message()`), generates the request HTTP header contents based on previously received data. The check that exists to prevent the local buffer from getting overflowed is implemented wrongly (using unsigned math) and as such it does not prevent the overflow from happening. This output data can grow larger than the local buffer if very large 'nt response' data is extracted from a previous NTLMv2 header provided by the malicious or broken HTTP server. Such a 'large value' needs to be around 1000 bytes or more. The actual payload data copied to the target buffer comes from the NTLMv2 type-2 response header.\n" +
+        '\n' +
+        '## References\n' +
+        '- [Apache Security Advisory](https://lists.apache.org/thread.html/8338a0f605bdbb3a6098bb76f666a95fc2b2f53f37fa1ecc89f1146f@%3Cdevnull.infra.apache.org%3E)\n' +
+        '- [CONFIRM](https://cert-portal.siemens.com/productcert/pdf/ssa-436177.pdf)\n' +
+        '- [CONFIRM](https://support.f5.com/csp/article/K84141449)\n' +
+        '- [CVE Details](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3822)\n' +
+        '- [Debian Security Advisory](https://www.debian.org/security/2019/dsa-4386)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2019-3822)\n' +
+        '- [Gentoo Security Advisory](https://security.gentoo.org/glsa/201903-03)\n' +
+        '- [MISC](https://curl.haxx.se/docs/CVE-2019-3822.html)\n' +
+        '- [Netapp Security Advisory](https://security.netapp.com/advisory/ntap-20190315-0001/)\n' +
+        '- [Netapp Security Advisory](https://security.netapp.com/advisory/ntap-20190719-0004/)\n' +
+        '- [Oracle Security Advisory](https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html)\n' +
+        '- [Oracle Security Advisory](https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html)\n' +
+        '- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-3822)\n' +
+        '- [Security Focus](http://www.securityfocus.com/bid/106950)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-3822)\n' +
+        '- [Ubuntu Security Advisory](https://usn.ubuntu.com/3882-1/)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 9.8,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-02-07T18:46:04.768724Z',
+      modificationTime: '2020-07-14T08:47:27.571206Z',
+      publicationTime: '2019-02-06T20:29:00Z',
+      disclosureTime: '2019-02-06T20:29:00Z',
+      id: 'SNYK-DEBIAN8-CURL-336284',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'curl',
+      version: '7.38.0-4+deb8u11',
+      nearestFixedInVersion: '7.38.0-4+deb8u14',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'Integer Overflow or Wraparound',
+      credit: [Array],
+      packageName: 'curl',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        'Multiple integer overflows in the (1) curl_escape, (2) curl_easy_escape, (3) curl_unescape, and (4) curl_easy_unescape functions in libcurl before 7.50.3 allow attackers to have unspecified impact via a string of length 0xffffffff, which triggers a heap-based buffer overflow.\n' +
+        '\n' +
+        '## References\n' +
+        '- [CONFIRM](https://curl.haxx.se/docs/adv_20160914.html)\n' +
+        '- [CVE Details](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-7167)\n' +
+        '- [Debian Security Announcement](https://lists.debian.org/debian-lts-announce/2018/11/msg00005.html)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2016-7167)\n' +
+        '- [Fedora Security Update](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/B3IU2FRXQNU6UJIQT4NGLWWTP2GJQXO7/)\n' +
+        '- [Fedora Security Update](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/LTH54DFOS4TSYPG5XKJDGAG4XPAR4T7M/)\n' +
+        '- [Fedora Security Update](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZMRWVISG7VUCYRMF23A2UHMYD72VQWAK/)\n' +
+        '- [Gentoo Security Advisory](https://security.gentoo.org/glsa/201701-47)\n' +
+        '- [Oracle Security Advisory](http://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html)\n' +
+        '- [RHSA Security Advisory](https://access.redhat.com/errata/RHSA-2017:2016)\n' +
+        '- [RHSA Security Advisory](https://access.redhat.com/errata/RHSA-2018:2486)\n' +
+        '- [RHSA Security Advisory](https://access.redhat.com/errata/RHSA-2018:3558)\n' +
+        '- [SLACKWARE](http://www.slackware.com/security/viewer.php?l=slackware-security&y=2016&m=slackware-security.538632)\n' +
+        '- [Security Focus](http://www.securityfocus.com/bid/92975)\n' +
+        '- [Security Tracker](http://www.securitytracker.com/id/1036813)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2016-7167)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 9.8,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-02-06T14:28:22.265416Z',
+      modificationTime: '2020-07-14T08:47:27.777626Z',
+      publicationTime: '2016-10-07T14:59:00Z',
+      disclosureTime: '2016-10-07T14:59:00Z',
+      id: 'SNYK-DEBIAN8-CURL-358408',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'curl',
+      version: '7.38.0-4+deb8u11',
+      nearestFixedInVersion: '7.38.0-4+deb8u13',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'Out-of-Bounds',
+      credit: [Array],
+      packageName: 'curl',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        'Curl versions 7.33.0 through 7.61.1 are vulnerable to a buffer overrun in the SASL authentication code that may lead to denial of service.\n' +
+        '\n' +
+        '## References\n' +
+        '- [Apache Security Advisory](https://lists.apache.org/thread.html/8338a0f605bdbb3a6098bb76f666a95fc2b2f53f37fa1ecc89f1146f@%3Cdevnull.infra.apache.org%3E)\n' +
+        '- [CVE Details](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16839)\n' +
+        '- [Debian Security Advisory](https://www.debian.org/security/2018/dsa-4331)\n' +
+        '- [Debian Security Announcement](https://lists.debian.org/debian-lts-announce/2018/11/msg00005.html)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2018-16839)\n' +
+        '- [Gentoo Security Advisory](https://security.gentoo.org/glsa/201903-03)\n' +
+        '- [GitHub Commit](https://github.com/curl/curl/commit/f3a24d7916b9173c69a3e0ee790102993833d6c5)\n' +
+        '- [MISC](https://curl.haxx.se/docs/CVE-2018-16839.html)\n' +
+        '- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2018-16839)\n' +
+        '- [Security Tracker](http://www.securitytracker.com/id/1042012)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2018-16839)\n' +
+        '- [Ubuntu Security Advisory](https://usn.ubuntu.com/3805-1/)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 9.8,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-02-06T14:28:23.454425Z',
+      modificationTime: '2020-07-14T08:47:27.577860Z',
+      publicationTime: '2018-12-02T10:35:30Z',
+      disclosureTime: '2018-10-31T18:29:00Z',
+      id: 'SNYK-DEBIAN8-CURL-358493',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'curl',
+      version: '7.38.0-4+deb8u11',
+      nearestFixedInVersion: '7.38.0-4+deb8u13',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'Integer Overflow or Wraparound',
+      credit: [Array],
+      packageName: 'curl',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        'curl before version 7.61.1 is vulnerable to a buffer overrun in the NTLM authentication code. The internal function Curl_ntlm_core_mk_nt_hash multiplies the length of the password by two (SUM) to figure out how large temporary storage area to allocate from the heap. The length value is then subsequently used to iterate over the password and generate output into the allocated storage buffer. On systems with a 32 bit size_t, the math to calculate SUM triggers an integer overflow when the password length exceeds 2GB (2^31 bytes). This integer overflow usually causes a very small buffer to actually get allocated instead of the intended very huge one, making the use of that buffer end up in a heap buffer overflow. (This bug is almost identical to CVE-2017-8816.)\n' +
+        '\n' +
+        '## References\n' +
+        '- [CONFIRM](https://cert-portal.siemens.com/productcert/pdf/ssa-436177.pdf)\n' +
+        '- [CONFIRM](https://curl.haxx.se/docs/CVE-2018-14618.html)\n' +
+        '- [CONFIRM](https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2018-0014)\n' +
+        '- [CVE Details](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14618)\n' +
+        '- [Debian Security Advisory](https://www.debian.org/security/2018/dsa-4286)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2018-14618)\n' +
+        '- [Gentoo Security Advisory](https://security.gentoo.org/glsa/201903-03)\n' +
+        '- [REDHAT](https://access.redhat.com/errata/RHSA-2019:1880)\n' +
+        '- [RHSA Security Advisory](https://access.redhat.com/errata/RHSA-2018:3558)\n' +
+        '- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2018-14618)\n' +
+        '- [Security Tracker](http://www.securitytracker.com/id/1041605)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2018-14618)\n' +
+        '- [Ubuntu Security Advisory](https://usn.ubuntu.com/3765-1/)\n' +
+        '- [Ubuntu Security Advisory](https://usn.ubuntu.com/3765-2/)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 9.8,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-02-06T14:28:24.452303Z',
+      modificationTime: '2020-07-14T08:47:27.595805Z',
+      publicationTime: '2018-09-25T08:49:51.171321Z',
+      disclosureTime: '2018-09-05T19:29:00Z',
+      id: 'SNYK-DEBIAN8-CURL-358558',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'curl',
+      version: '7.38.0-4+deb8u11',
+      nearestFixedInVersion: '7.38.0-4+deb8u12',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'Buffer Overflow',
+      credit: [Array],
+      packageName: 'curl',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        'Heap buffer overflow in the TFTP protocol handler in cURL 7.19.4 to 7.65.3.\n' +
+        '\n' +
+        '## References\n' +
+        '- [ADVISORY](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-5482)\n' +
+        '- [CONFIRM](https://curl.haxx.se/docs/CVE-2019-5482.html)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2019-5482)\n' +
+        '- [Fedora Security Update](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RGDVKSLY5JUNJRLYRUA6CXGQ2LM63XC3/)\n' +
+        '- [Fedora Security Update](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UA7KDM2WPM5CJDDGOEGFV6SSGD2J7RNT/)\n' +
+        '- [OpenSuse Security Announcement](http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00048.html)\n' +
+        '- [OpenSuse Security Announcement](http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00055.html)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-5482)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 9.8,
+      CVSSv3: 'CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-09-11T09:22:29.146376Z',
+      modificationTime: '2020-07-14T08:47:27.534573Z',
+      publicationTime: '2019-09-11T09:22:28.354405Z',
+      disclosureTime: '2019-09-16T19:15:00Z',
+      id: 'SNYK-DEBIAN8-CURL-466507',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'curl',
+      version: '7.38.0-4+deb8u11',
+      nearestFixedInVersion: '7.38.0-4+deb8u16',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'Out-of-bounds Write',
+      credit: [Array],
+      packageName: 'file',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        'cdf_read_property_info in cdf.c in file through 5.37 does not restrict the number of CDF_VECTOR elements, which allows a heap-based buffer overflow (4-byte out-of-bounds write).\n' +
+        '\n' +
+        '## References\n' +
+        '- [ADVISORY](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18218)\n' +
+        '- [CONFIRM](https://security.netapp.com/advisory/ntap-20200115-0001/)\n' +
+        '- [Debian Security Advisory](https://www.debian.org/security/2019/dsa-4550)\n' +
+        '- [Debian Security Announcement](https://lists.debian.org/debian-lts-announce/2019/10/msg00032.html)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2019-18218)\n' +
+        '- [FEDORA](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D6BJVGXSCC6NMIAWX36FPWHEIFON3OSE/)\n' +
+        '- [Fedora Security Update](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CV6PFCEYHYALMTT45QE2U5C5TEJZQPXJ/)\n' +
+        '- [Fedora Security Update](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VBK6XOJR6OVWT2FUEBO7V7KCOSSLAP52/)\n' +
+        '- [GENTOO](https://security.gentoo.org/glsa/202003-24)\n' +
+        '- [GitHub Commit](https://github.com/file/file/commit/46a8443f76cec4b41ec736eca396984c74664f84)\n' +
+        '- [MISC](https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=16780)\n' +
+        '- [SUSE](http://lists.opensuse.org/opensuse-security-announce/2020-05/msg00044.html)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-18218)\n' +
+        '- [Ubuntu Security Advisory](https://usn.ubuntu.com/4172-1/)\n' +
+        '- [Ubuntu Security Advisory](https://usn.ubuntu.com/4172-2/)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 7.3,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-10-21T18:23:34.599824Z',
+      modificationTime: '2020-07-14T08:48:26.264332Z',
+      publicationTime: '2019-10-21T18:23:34.612624Z',
+      disclosureTime: '2019-10-21T05:15:00Z',
+      id: 'SNYK-DEBIAN8-FILE-473937',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'file',
+      version: '1:5.22+15-2+deb8u3',
+      nearestFixedInVersion: '1:5.22+15-2+deb8u6',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'Improper Input Validation',
+      credit: [Array],
+      packageName: 'git',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        `Git before 2.14.5, 2.15.x before 2.15.3, 2.16.x before 2.16.5, 2.17.x before 2.17.2, 2.18.x before 2.18.1, and 2.19.x before 2.19.1 allows remote code execution during processing of a recursive "git clone" of a superproject if a .gitmodules file has a URL field beginning with a '-' character.\n` +
+        '\n' +
+        '## References\n' +
+        '- [Bugtraq Mailing List](https://seclists.org/bugtraq/2019/Mar/30)\n' +
+        '- [CVE Details](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17456)\n' +
+        '- [Debian Security Advisory](https://www.debian.org/security/2018/dsa-4311)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2018-17456)\n' +
+        '- [Exploit DB](https://www.exploit-db.com/exploits/45548/)\n' +
+        '- [Exploit DB](https://www.exploit-db.com/exploits/45631/)\n' +
+        '- [GitHub Commit](https://github.com/git/git/commit/1a7fd1fb2998002da6e9ff2ee46e1bdd25ee8404)\n' +
+        '- [GitHub Commit](https://github.com/git/git/commit/a124133e1e6ab5c7a9fef6d0e6bcb084e3455b46)\n' +
+        '- [HP Security Bulletin](https://marc.info/?l=git&m=153875888916397&w=2)\n' +
+        '- [MISC](http://packetstormsecurity.com/files/152173/Sourcetree-Git-Arbitrary-Code-Execution-URL-Handling.html)\n' +
+        '- [OSS security Advisory](https://www.openwall.com/lists/oss-security/2018/10/06/3)\n' +
+        '- [RHSA Security Advisory](https://access.redhat.com/errata/RHSA-2018:3408)\n' +
+        '- [RHSA Security Advisory](https://access.redhat.com/errata/RHSA-2018:3505)\n' +
+        '- [RHSA Security Advisory](https://access.redhat.com/errata/RHSA-2018:3541)\n' +
+        '- [RHSA Security Advisory](https://access.redhat.com/errata/RHSA-2020:0316)\n' +
+        '- [Security Focus](http://www.securityfocus.com/bid/105523)\n' +
+        '- [Security Focus](http://www.securityfocus.com/bid/107511)\n' +
+        '- [Security Tracker](http://www.securitytracker.com/id/1041811)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2018-17456)\n' +
+        '- [Ubuntu Security Advisory](https://usn.ubuntu.com/3791-1/)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 9.8,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:F',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-02-06T14:23:44.595990Z',
+      modificationTime: '2020-07-14T08:48:00.748803Z',
+      publicationTime: '2018-10-06T14:29:00Z',
+      disclosureTime: '2018-10-06T14:29:00Z',
+      id: 'SNYK-DEBIAN8-GIT-340820',
+      semver: [Object],
+      exploit: 'Functional',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'git',
+      version: '1:2.1.4-2.1+deb8u6',
+      nearestFixedInVersion: '1:2.1.4-2.1+deb8u7',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'Improper Input Validation',
+      credit: [Array],
+      packageName: 'git',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        "A remote code execution vulnerability exists when Git for Visual Studio improperly sanitizes input, aka 'Git for Visual Studio Remote Code Execution Vulnerability'. This CVE ID is unique from CVE-2019-1349, CVE-2019-1350, CVE-2019-1354, CVE-2019-1387.\n" +
+        '\n' +
+        '## References\n' +
+        '- [ADVISORY](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1352)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2019-1352)\n' +
+        '- [MISC](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1352)\n' +
+        '- [MISC](https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/)\n' +
+        '- [OpenSuse Security Announcement](http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00056.html)\n' +
+        '- [RHSA Security Advisory](https://access.redhat.com/errata/RHSA-2020:0228)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-1352)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 8.8,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-12-10T21:09:05.476128Z',
+      modificationTime: '2020-07-14T08:48:00.731926Z',
+      publicationTime: '2019-12-10T21:04:12.509126Z',
+      disclosureTime: '2020-01-24T21:15:00Z',
+      id: 'SNYK-DEBIAN8-GIT-537139',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'git',
+      version: '1:2.1.4-2.1+deb8u6',
+      nearestFixedInVersion: '1:2.1.4-2.1+deb8u8',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'CVE-2019-1353',
+      credit: [Array],
+      packageName: 'git',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        'An issue was found in Git before v2.24.1, v2.23.1, v2.22.2, v2.21.1, v2.20.2, v2.19.3, v2.18.2, v2.17.3, v2.16.6, v2.15.4, and v2.14.6. When running Git in the Windows Subsystem for Linux (also known as "WSL") while accessing a working directory on a regular Windows drive, none of the NTFS protections were active.\n' +
+        '\n' +
+        '## References\n' +
+        '- [ADVISORY](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1353)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2019-1353)\n' +
+        '- [Gentoo Security Advisory](https://security.gentoo.org/glsa/202003-30)\n' +
+        '- [MISC](https://lore.kernel.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/T/%23u)\n' +
+        '- [MISC](https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/)\n' +
+        '- [OpenSuse Security Announcement](http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00056.html)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-1353)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 7.3,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-12-10T21:14:10.184816Z',
+      modificationTime: '2020-07-14T08:48:00.702892Z',
+      publicationTime: '2019-12-10T21:09:06.650924Z',
+      disclosureTime: '2020-01-24T22:15:00Z',
+      id: 'SNYK-DEBIAN8-GIT-537173',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'git',
+      version: '1:2.1.4-2.1+deb8u6',
+      nearestFixedInVersion: '1:2.1.4-2.1+deb8u8',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'Improper Input Validation',
+      credit: [Array],
+      packageName: 'git',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        "A remote code execution vulnerability exists when Git for Visual Studio improperly sanitizes input, aka 'Git for Visual Studio Remote Code Execution Vulnerability'. This CVE ID is unique from CVE-2019-1350, CVE-2019-1352, CVE-2019-1354, CVE-2019-1387.\n" +
+        '\n' +
+        '## References\n' +
+        '- [ADVISORY](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1349)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2019-1349)\n' +
+        '- [MISC](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1349)\n' +
+        '- [MISC](https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/)\n' +
+        '- [OpenSuse Security Announcement](http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00056.html)\n' +
+        '- [RHSA Security Advisory](https://access.redhat.com/errata/RHSA-2020:0228)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-1349)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 8.8,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-12-10T21:14:11.819313Z',
+      modificationTime: '2020-07-14T08:48:00.715118Z',
+      publicationTime: '2019-12-10T21:04:14.657528Z',
+      disclosureTime: '2020-01-24T21:15:00Z',
+      id: 'SNYK-DEBIAN8-GIT-537176',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'git',
+      version: '1:2.1.4-2.1+deb8u6',
+      nearestFixedInVersion: '1:2.1.4-2.1+deb8u8',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'Resource Exhaustion',
+      credit: [Array],
+      packageName: 'imagemagick',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        'ImageMagick 7.0.7-12 Q16, a CPU exhaustion vulnerability was found in the function ReadDDSInfo in coders/dds.c, which allows attackers to cause a denial of service.\n' +
+        '\n' +
+        '## References\n' +
+        '- [Debian Security Announcement](https://lists.debian.org/debian-lts-announce/2018/01/msg00002.html)\n' +
+        '- [Debian Security Announcement](https://lists.debian.org/debian-lts-announce/2019/05/msg00015.html)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2017-1000476)\n' +
+        '- [GitHub Issue](https://github.com/ImageMagick/ImageMagick/issues/867)\n' +
+        '- [Security Focus](http://www.securityfocus.com/bid/102428)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2017-1000476)\n' +
+        '- [Ubuntu Security Advisory](https://usn.ubuntu.com/3681-1/)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 6.5,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-02-06T14:39:08.377949Z',
+      modificationTime: '2020-07-14T08:47:35.442992Z',
+      publicationTime: '2018-01-03T18:29:00Z',
+      disclosureTime: '2018-01-03T18:29:00Z',
+      id: 'SNYK-DEBIAN8-IMAGEMAGICK-401167',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'imagemagick',
+      version: '8:6.8.9.9-5+deb8u12',
+      nearestFixedInVersion: '8:6.8.9.9-5+deb8u16',
+      dockerfileInstruction: 'RUN apt-get install -y imagemagick',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'NULL Pointer Dereference',
+      credit: [Array],
+      packageName: 'imagemagick',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        'ImageMagick 7.0.7-0 has a NULL Pointer Dereference in TIFFIgnoreTags in coders/tiff.c.\n' +
+        '\n' +
+        '## References\n' +
+        '- [Debian Security Announcement](https://lists.debian.org/debian-lts-announce/2019/05/msg00015.html)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2017-14532)\n' +
+        '- [GitHub Issue](https://github.com/ImageMagick/ImageMagick/issues/719)\n' +
+        '- [Security Focus](http://www.securityfocus.com/bid/100883)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2017-14532)\n' +
+        '- [Ubuntu Security Advisory](https://usn.ubuntu.com/3681-1/)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 9.8,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-02-06T14:39:09.500343Z',
+      modificationTime: '2020-07-14T08:47:35.675670Z',
+      publicationTime: '2017-09-18T01:29:00Z',
+      disclosureTime: '2017-09-18T01:29:00Z',
+      id: 'SNYK-DEBIAN8-IMAGEMAGICK-401247',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'imagemagick',
+      version: '8:6.8.9.9-5+deb8u12',
+      nearestFixedInVersion: '8:6.8.9.9-5+deb8u16',
+      dockerfileInstruction: 'RUN apt-get install -y imagemagick',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'Resource Management Errors',
+      credit: [Array],
+      packageName: 'imagemagick',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        'In ImageMagick 7.0.7-16 Q16, a vulnerability was found in the function ReadOnePNGImage in coders/png.c, which allows attackers to cause a denial of service (ReadOneMNGImage large loop) via a crafted mng image file.\n' +
+        '\n' +
+        '## References\n' +
+        '- [Debian Security Announcement](https://lists.debian.org/debian-lts-announce/2018/01/msg00000.html)\n' +
+        '- [Debian Security Announcement](https://lists.debian.org/debian-lts-announce/2019/05/msg00015.html)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2017-17914)\n' +
+        '- [GitHub Issue](https://github.com/ImageMagick/ImageMagick/issues/908)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2017-17914)\n' +
+        '- [Ubuntu Security Advisory](https://usn.ubuntu.com/3681-1/)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 6.5,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-02-06T14:39:21.523748Z',
+      modificationTime: '2020-07-14T08:47:35.477422Z',
+      publicationTime: '2017-12-27T17:08:00Z',
+      disclosureTime: '2017-12-27T17:08:00Z',
+      id: 'SNYK-DEBIAN8-IMAGEMAGICK-402099',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'imagemagick',
+      version: '8:6.8.9.9-5+deb8u12',
+      nearestFixedInVersion: '8:6.8.9.9-5+deb8u16',
+      dockerfileInstruction: 'RUN apt-get install -y imagemagick',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'Integer Overflow or Wraparound',
+      credit: [Array],
+      packageName: 'mercurial',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        'mpatch.c in Mercurial before 4.6.1 mishandles integer addition and subtraction, aka OVE-20180430-0002.\n' +
+        '\n' +
+        '## References\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2018-13347)\n' +
+        '- [MISC](https://www.mercurial-scm.org/repo/hg-committed/log?rev=modifies%28%22mercurial%2Fmpatch.c%22%29%2Band%2B4.5%3A%3A)\n' +
+        '- [MISC](https://www.mercurial-scm.org/repo/hg/rev/1acfc35d478c)\n' +
+        '- [MISC](https://www.mercurial-scm.org/wiki/WhatsNew%23Mercurial_4.6.1_.282018-06-06.29)\n' +
+        '- [RHSA Security Advisory](https://access.redhat.com/errata/RHSA-2019:2276)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2018-13347)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 9.8,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-02-06T14:15:42.471494Z',
+      modificationTime: '2020-07-14T08:48:40.736600Z',
+      publicationTime: '2018-07-11T00:28:38.794635Z',
+      disclosureTime: '2018-07-06T00:29:00Z',
+      id: 'SNYK-DEBIAN8-MERCURIAL-311062',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'mercurial',
+      version: '3.1.2-2+deb8u4',
+      nearestFixedInVersion: '3.1.2-2+deb8u5',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'OS Command Injection',
+      credit: [Array],
+      packageName: 'mercurial',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        'In Mercurial before 4.4.1, it is possible that a specially malformed repository can cause Git subrepositories to run arbitrary code in the form of a .git/hooks/post-update script checked into the repository. Typical use of Mercurial prevents construction of such repositories, but they can be created programmatically.\n' +
+        '\n' +
+        '## References\n' +
+        '- [CONFIRM](https://confluence.atlassian.com/sourcetreekb/sourcetree-security-advisory-2018-01-24-942834324.html)\n' +
+        '- [Debian Security Announcement](https://lists.debian.org/debian-lts-announce/2017/12/msg00027.html)\n' +
+        '- [Debian Security Announcement](https://lists.debian.org/debian-lts-announce/2018/07/msg00005.html)\n' +
+        '- [Debian Security Announcement](https://lists.debian.org/debian-lts-announce/2018/07/msg00041.html)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2017-17458)\n' +
+        '- [MISC](https://bz.mercurial-scm.org/show_bug.cgi?id=5730)\n' +
+        '- [MISC](https://www.mercurial-scm.org/pipermail/mercurial-devel/2017-November/107333.html)\n' +
+        '- [MISC](https://www.mercurial-scm.org/wiki/WhatsNew%23Mercurial_4.4.1_.282017-11-07.29)\n' +
+        '- [Security Focus](http://www.securityfocus.com/bid/102926)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2017-17458)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 9.8,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-02-06T14:15:42.589511Z',
+      modificationTime: '2020-07-14T08:48:40.765270Z',
+      publicationTime: '2017-12-07T18:29:00Z',
+      disclosureTime: '2017-12-07T18:29:00Z',
+      id: 'SNYK-DEBIAN8-MERCURIAL-311069',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'mercurial',
+      version: '3.1.2-2+deb8u4',
+      nearestFixedInVersion: '3.1.2-2+deb8u6',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'Access Restriction Bypass',
+      credit: [Array],
+      packageName: 'mercurial',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        'In Mercurial before 4.1.3, "hg serve --stdio" allows remote authenticated users to launch the Python debugger, and consequently execute arbitrary code, by using --debugger as a repository name.\n' +
+        '\n' +
+        '## References\n' +
+        '- [CONFIRM](https://www.mercurial-scm.org/repo/hg/rev/77eaf9539499)\n' +
+        '- [CONFIRM](https://www.mercurial-scm.org/wiki/WhatsNew%23Mercurial_4.1.3_.282017-4-18.29)\n' +
+        '- [Debian Bug Report](https://bugs.debian.org/861243)\n' +
+        '- [Debian Security Advisory](http://www.debian.org/security/2017/dsa-3963)\n' +
+        '- [Debian Security Announcement](https://lists.debian.org/debian-lts-announce/2018/07/msg00005.html)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2017-9462)\n' +
+        '- [Gentoo Security Advisory](https://security.gentoo.org/glsa/201709-18)\n' +
+        '- [RHSA Security Advisory](https://access.redhat.com/errata/RHSA-2017:1576)\n' +
+        '- [Security Focus](http://www.securityfocus.com/bid/99123)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2017-9462)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 8.8,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-02-06T14:15:42.954266Z',
+      modificationTime: '2020-07-14T08:48:40.782027Z',
+      publicationTime: '2017-06-06T21:29:00Z',
+      disclosureTime: '2017-06-06T21:29:00Z',
+      id: 'SNYK-DEBIAN8-MERCURIAL-311093',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'mercurial',
+      version: '3.1.2-2+deb8u4',
+      nearestFixedInVersion: '3.1.2-2+deb8u5',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'OS Command Injection',
+      credit: [Array],
+      packageName: 'patch',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        'GNU patch through 2.7.6 is vulnerable to OS shell command injection that can be exploited by opening a crafted patch file that contains an ed style diff payload with shell metacharacters. The ed editor does not need to be present on the vulnerable system. This is different from CVE-2018-1000156.\n' +
+        '\n' +
+        '## References\n' +
+        '- [ADVISORY](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13638)\n' +
+        '- [Bugtraq Mailing List](https://seclists.org/bugtraq/2019/Aug/29)\n' +
+        '- [Bugtraq Mailing List](https://seclists.org/bugtraq/2019/Jul/54)\n' +
+        '- [CONFIRM](https://security.netapp.com/advisory/ntap-20190828-0001/)\n' +
+        '- [Debian Security Advisory](https://www.debian.org/security/2019/dsa-4489)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2019-13638)\n' +
+        '- [Fedora Security Update](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SVWWGISFWACROJJPVJJL4UBLVZ7LPOLT/)\n' +
+        '- [Gentoo Security Advisory](https://security.gentoo.org/glsa/201908-22)\n' +
+        '- [MISC](http://packetstormsecurity.com/files/154124/GNU-patch-Command-Injection-Directory-Traversal.html)\n' +
+        '- [MISC](https://git.savannah.gnu.org/cgit/patch.git/commit/?id=3fcd042d26d70856e826a42b5f93dc4854d80bf0)\n' +
+        '- [MISC](https://github.com/irsl/gnu-patch-vulnerabilities)\n' +
+        '- [REDHAT](https://access.redhat.com/errata/RHSA-2019:2798)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-13638)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 7.8,
+      CVSSv3: 'CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-07-24T10:06:40.358782Z',
+      modificationTime: '2020-07-14T08:48:35.513479Z',
+      publicationTime: '2019-07-24T09:30:34.929232Z',
+      disclosureTime: '2019-07-26T13:15:00Z',
+      id: 'SNYK-DEBIAN8-PATCH-453544',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'patch',
+      version: '2.7.5-1',
+      nearestFixedInVersion: '2.7.5-1+deb8u3',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'OS Command Injection',
+      credit: [Array],
+      packageName: 'patch',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        'do_ed_script in pch.c in GNU patch through 2.7.6 does not block strings beginning with a ! character. NOTE: this is the same commit as for CVE-2019-13638, but the ! syntax is specific to ed, and is unrelated to a shell metacharacter.\n' +
+        '\n' +
+        '## References\n' +
+        '- [Bugtraq Mailing List](https://seclists.org/bugtraq/2019/Aug/29)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2018-20969)\n' +
+        '- [MISC](http://packetstormsecurity.com/files/154124/GNU-patch-Command-Injection-Directory-Traversal.html)\n' +
+        '- [MISC](https://git.savannah.gnu.org/cgit/patch.git/commit/?id=3fcd042d26d70856e826a42b5f93dc4854d80bf0)\n' +
+        '- [MISC](https://github.com/irsl/gnu-patch-vulnerabilities)\n' +
+        '- [REDHAT](https://access.redhat.com/errata/RHSA-2019:2798)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2018-20969)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 7.8,
+      CVSSv3: 'CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-08-16T09:27:49.962436Z',
+      modificationTime: '2020-07-14T08:48:35.507707Z',
+      publicationTime: '2019-08-16T09:27:49.970169Z',
+      disclosureTime: '2019-08-16T04:15:00Z',
+      id: 'SNYK-DEBIAN8-PATCH-459565',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'patch',
+      version: '2.7.5-1',
+      nearestFixedInVersion: '2.7.5-1+deb8u3',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'Deserialization of Untrusted Data',
+      credit: [Array],
+      packageName: 'systemd',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        'A vulnerability in unit_deserialize of systemd allows an attacker to supply arbitrary state across systemd re-execution via NotifyAccess. This can be used to improperly influence systemd execution and possibly lead to root privilege escalation. Affected releases are systemd versions up to and including 239.\n' +
+        '\n' +
+        '## References\n' +
+        '- [Debian Security Announcement](https://lists.debian.org/debian-lts-announce/2018/11/msg00017.html)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2018-15686)\n' +
+        '- [Exploit DB](https://www.exploit-db.com/exploits/45714/)\n' +
+        '- [Gentoo Security Advisory](https://security.gentoo.org/glsa/201810-10)\n' +
+        '- [GitHub PR](https://github.com/systemd/systemd/pull/10519)\n' +
+        '- [RHSA Security Advisory](https://access.redhat.com/errata/RHSA-2019:2091)\n' +
+        '- [Security Focus](http://www.securityfocus.com/bid/105747)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2018-15686)\n' +
+        '- [Ubuntu Security Advisory](https://usn.ubuntu.com/3816-1/)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 9.8,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-02-06T14:14:06.966629Z',
+      modificationTime: '2020-07-14T08:47:42.114757Z',
+      publicationTime: '2018-10-28T19:51:21Z',
+      disclosureTime: '2018-10-26T14:29:00Z',
+      id: 'SNYK-DEBIAN8-SYSTEMD-305095',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'systemd',
+      version: '215-17+deb8u7',
+      nearestFixedInVersion: '215-17+deb8u8',
+      dockerBaseImage: 'node:10.4.0'
+    },
+    {
+      title: 'Out-of-Bounds',
+      credit: [Array],
+      packageName: 'wget',
+      language: 'linux',
+      packageManager: 'debian:8',
+      description: '## Overview\n' +
+        'Buffer overflow in GNU Wget 1.20.1 and earlier allows remote attackers to cause a denial-of-service (DoS) or may execute an arbitrary code via unspecified vectors.\n' +
+        '\n' +
+        '## References\n' +
+        '- [CONFIRM](https://support.f5.com/csp/article/K14560101)\n' +
+        '- [CVE Details](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-5953)\n' +
+        '- [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2019-5953)\n' +
+        '- [GENTOO](https://security.gentoo.org/glsa/201908-19)\n' +
+        '- [MISC](http://jvn.jp/en/jp/JVN25261088/index.html)\n' +
+        '- [MISC](https://www.gnu.org/software/wget/)\n' +
+        '- [Ubuntu CVE Tracker](http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-5953)\n',
+      identifiers: [Object],
+      severity: 'high',
+      cvssScore: 9.8,
+      CVSSv3: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H',
+      patches: [],
+      references: [Array],
+      creationTime: '2019-04-05T09:26:33.842407Z',
+      modificationTime: '2020-07-14T08:48:41.975008Z',
+      publicationTime: '2019-04-05T09:26:31Z',
+      disclosureTime: '2019-05-17T16:29:00Z',
+      id: 'SNYK-DEBIAN8-WGET-342200',
+      semver: [Object],
+      exploit: 'Not Defined',
+      from: [Array],
+      upgradePath: [Array],
+      isUpgradable: true,
+      isPatchable: false,
+      name: 'wget',
+      version: '1.16-1+deb8u5',
+      nearestFixedInVersion: '1.16-1+deb8u6',
+      dockerBaseImage: 'node:10.4.0'
+    }
+  ],
+  ok: false,
+  dependencyCount: 382,
+  org: 'global-demo-corporation',
+  policy: '# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.\n' +
+    'version: v1.19.0\n' +
+    'ignore: {}\n' +
+    'patch: {}\n',
+  isPrivate: true,
+  licensesPolicy: {
+    severities: {},
+    orgLicenseRules: {
+      'Artistic-1.0': [Object],
+      'Artistic-2.0': [Object],
+      'CDDL-1.0': [Object],
+      'CPOL-1.02': [Object],
+      'EPL-1.0': [Object],
+      'GPL-2.0': [Object],
+      'GPL-3.0': [Object],
+      'LGPL-2.0': [Object],
+      'LGPL-2.1': [Object],
+      'LGPL-3.0': [Object],
+      'MPL-1.1': [Object],
+      'MPL-2.0': [Object],
+      'MS-RL': [Object],
+      'SimPL-2.0': [Object],
+      'AGPL-1.0': [Object],
+      'AGPL-3.0': [Object]
+    }
+  },
+  packageManager: 'deb',
+  projectId: 'fdbcaab1-47ac-4961-a19b-6e82a464e809',
+  ignoreSettings: {
+    adminOnly: true,
+    reasonRequired: true,
+    disregardFilesystemIgnores: true
+  },
+  docker: {
+    baseImage: 'node:10.4.0',
+    baseImageRemediation: { code: 'REMEDIATION_AVAILABLE', advice: [Array] },
+    binariesVulns: { issuesData: [Object], affectedPkgs: [Object] }
+  },
+  summary: '7994 vulnerable dependency paths',
+  filesystemPolicy: false,
+  filtered: { ignore: [], patch: [] },
+  uniqueCount: 950,
+  projectName: 'docker-image|docker-goof',
+  displayTargetFile: 'Dockerfile',
+  path: 'docker-goof'
+}
+Snyk Test Failed

@@ -1,0 +1,133 @@
+Testing snyk-filter...
+✗ High severity vulnerability found on apt@1.0.9.8.4
+- desc: Arbitrary Code Injection
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-APT-407401
+- from: docker-image|docker-goof@latest > apt@1.0.9.8.4
+Upgrade direct dependency apt@1.0.9.8.4 to apt@1.0.9.8.5
+
+✗ High severity vulnerability found on curl@7.38.0-4+deb8u11
+- desc: Out-of-Bounds
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-CURL-336284
+- from: docker-image|docker-goof@latest > curl@7.38.0-4+deb8u11
+Upgrade direct dependency curl@7.38.0-4+deb8u11 to curl@7.38.0-4+deb8u14
+
+✗ High severity vulnerability found on curl@7.38.0-4+deb8u11
+- desc: Integer Overflow or Wraparound
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-CURL-358408
+- from: docker-image|docker-goof@latest > curl@7.38.0-4+deb8u11
+Upgrade direct dependency curl@7.38.0-4+deb8u11 to curl@7.38.0-4+deb8u13
+
+✗ High severity vulnerability found on curl@7.38.0-4+deb8u11
+- desc: Out-of-Bounds
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-CURL-358493
+- from: docker-image|docker-goof@latest > curl@7.38.0-4+deb8u11
+Upgrade direct dependency curl@7.38.0-4+deb8u11 to curl@7.38.0-4+deb8u13
+
+✗ High severity vulnerability found on curl@7.38.0-4+deb8u11
+- desc: Integer Overflow or Wraparound
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-CURL-358558
+- from: docker-image|docker-goof@latest > curl@7.38.0-4+deb8u11
+Upgrade direct dependency curl@7.38.0-4+deb8u11 to curl@7.38.0-4+deb8u12
+
+✗ High severity vulnerability found on curl@7.38.0-4+deb8u11
+- desc: Buffer Overflow
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-CURL-466507
+- from: docker-image|docker-goof@latest > curl@7.38.0-4+deb8u11
+Upgrade direct dependency curl@7.38.0-4+deb8u11 to curl@7.38.0-4+deb8u16
+
+✗ High severity vulnerability found on file@1:5.22+15-2+deb8u3
+- desc: Out-of-bounds Write
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-FILE-473937
+- from: docker-image|docker-goof@latest > file@1:5.22+15-2+deb8u3
+Upgrade direct dependency file@1:5.22+15-2+deb8u3 to file@1:5.22+15-2+deb8u6
+
+✗ High severity vulnerability found on git@1:2.1.4-2.1+deb8u6
+- desc: Improper Input Validation
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-GIT-340820
+- from: docker-image|docker-goof@latest > git@1:2.1.4-2.1+deb8u6
+Upgrade direct dependency git@1:2.1.4-2.1+deb8u6 to git@1:2.1.4-2.1+deb8u7
+
+✗ High severity vulnerability found on git@1:2.1.4-2.1+deb8u6
+- desc: Improper Input Validation
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-GIT-537139
+- from: docker-image|docker-goof@latest > git@1:2.1.4-2.1+deb8u6
+Upgrade direct dependency git@1:2.1.4-2.1+deb8u6 to git@1:2.1.4-2.1+deb8u8
+
+✗ High severity vulnerability found on git@1:2.1.4-2.1+deb8u6
+- desc: CVE-2019-1353
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-GIT-537173
+- from: docker-image|docker-goof@latest > git@1:2.1.4-2.1+deb8u6
+Upgrade direct dependency git@1:2.1.4-2.1+deb8u6 to git@1:2.1.4-2.1+deb8u8
+
+✗ High severity vulnerability found on git@1:2.1.4-2.1+deb8u6
+- desc: Improper Input Validation
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-GIT-537176
+- from: docker-image|docker-goof@latest > git@1:2.1.4-2.1+deb8u6
+Upgrade direct dependency git@1:2.1.4-2.1+deb8u6 to git@1:2.1.4-2.1+deb8u8
+
+✗ High severity vulnerability found on imagemagick@8:6.8.9.9-5+deb8u12
+- desc: Resource Exhaustion
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-IMAGEMAGICK-401167
+- from: docker-image|docker-goof@latest > imagemagick@8:6.8.9.9-5+deb8u12
+Upgrade direct dependency imagemagick@8:6.8.9.9-5+deb8u12 to imagemagick@8:6.8.9.9-5+deb8u16
+
+✗ High severity vulnerability found on imagemagick@8:6.8.9.9-5+deb8u12
+- desc: NULL Pointer Dereference
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-IMAGEMAGICK-401247
+- from: docker-image|docker-goof@latest > imagemagick@8:6.8.9.9-5+deb8u12
+Upgrade direct dependency imagemagick@8:6.8.9.9-5+deb8u12 to imagemagick@8:6.8.9.9-5+deb8u16
+
+✗ High severity vulnerability found on imagemagick@8:6.8.9.9-5+deb8u12
+- desc: Resource Management Errors
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-IMAGEMAGICK-402099
+- from: docker-image|docker-goof@latest > imagemagick@8:6.8.9.9-5+deb8u12
+Upgrade direct dependency imagemagick@8:6.8.9.9-5+deb8u12 to imagemagick@8:6.8.9.9-5+deb8u16
+
+✗ High severity vulnerability found on mercurial@3.1.2-2+deb8u4
+- desc: Integer Overflow or Wraparound
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-MERCURIAL-311062
+- from: docker-image|docker-goof@latest > mercurial@3.1.2-2+deb8u4
+Upgrade direct dependency mercurial@3.1.2-2+deb8u4 to mercurial@3.1.2-2+deb8u5
+
+✗ High severity vulnerability found on mercurial@3.1.2-2+deb8u4
+- desc: OS Command Injection
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-MERCURIAL-311069
+- from: docker-image|docker-goof@latest > mercurial@3.1.2-2+deb8u4
+Upgrade direct dependency mercurial@3.1.2-2+deb8u4 to mercurial@3.1.2-2+deb8u6
+
+✗ High severity vulnerability found on mercurial@3.1.2-2+deb8u4
+- desc: Access Restriction Bypass
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-MERCURIAL-311093
+- from: docker-image|docker-goof@latest > mercurial@3.1.2-2+deb8u4
+Upgrade direct dependency mercurial@3.1.2-2+deb8u4 to mercurial@3.1.2-2+deb8u5
+
+✗ High severity vulnerability found on patch@2.7.5-1
+- desc: OS Command Injection
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-PATCH-453544
+- from: docker-image|docker-goof@latest > patch@2.7.5-1
+Upgrade direct dependency patch@2.7.5-1 to patch@2.7.5-1+deb8u3
+
+✗ High severity vulnerability found on patch@2.7.5-1
+- desc: OS Command Injection
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-PATCH-459565
+- from: docker-image|docker-goof@latest > patch@2.7.5-1
+Upgrade direct dependency patch@2.7.5-1 to patch@2.7.5-1+deb8u3
+
+✗ High severity vulnerability found on systemd@215-17+deb8u7
+- desc: Deserialization of Untrusted Data
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-SYSTEMD-305095
+- from: docker-image|docker-goof@latest > systemd@215-17+deb8u7
+Upgrade direct dependency systemd@215-17+deb8u7 to systemd@215-17+deb8u8
+
+✗ High severity vulnerability found on wget@1.16-1+deb8u5
+- desc: Out-of-Bounds
+- info: https://snyk.io/vuln/SNYK-DEBIAN8-WGET-342200
+- from: docker-image|docker-goof@latest > wget@1.16-1+deb8u5
+Upgrade direct dependency wget@1.16-1+deb8u5 to wget@1.16-1+deb8u6
+
+Organisation: global-demo-corporation
+Licenses enabled
+
+Tested 382 dependencies for known issues
+High severity & upgradeable vulns found. Please review upgrade steps
+Snyk Test Failed
