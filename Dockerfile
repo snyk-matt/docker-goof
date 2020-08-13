@@ -1,3 +1,3 @@
-FROM node:10.4
+FROM nginx:latest
 
 RUN apt-get install -y imagemagick
